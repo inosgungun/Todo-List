@@ -41,3 +41,40 @@
     height: 30px;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f1f1;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea, #764ba2); /* violet-blue gradient */
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.row button:hover {
+    background: linear-gradient(135deg, #5f72bd, #9b23ea);
+}
+
