@@ -123,4 +123,26 @@ ul li.checked::before {
     background-image: url("images/checked.png");
 }
 
+ul li span {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+ul li span img {
+    width: 18px;
+    height: 18px;
+}
+
+ul li span:hover {
+    background: #ffe6e6;
+}
 
