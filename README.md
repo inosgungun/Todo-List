@@ -5,7 +5,7 @@ A clean and simple **To-Do List** built using **HTML, CSS, and JavaScript**. Thi
 
 
 
-## 🚀 Try It Live
+## 🌐 Try It Live
 
 Check out the live version of the To-Do List App:
 
