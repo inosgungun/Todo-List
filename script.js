@@ -27,6 +27,40 @@ listContainer.addEventListener("click", function(e){
     }
 }, false);
 
+listContainer.addEventListener("dblclick", function(e) {
+    if (e.target.tagName === "LI") {
+        let li = e.target;
+        let currentText = li.childNodes[0].nodeValue.trim();
+
+        let input = document.createElement("input");
+        input.type = "text";
+        input.value = currentText;
+        input.className = "edit-input";
+
+        li.innerHTML = "";
+        li.appendChild(input);
+        input.focus();
+
+        input.addEventListener("blur", saveEdit);
+        input.addEventListener("keydown", function(ev) {
+            if (ev.key === "Enter") input.blur();
+        });
+
+        function saveEdit() {
+            if (input.value.trim() !== "") {
+                li.innerHTML = input.value;
+                let span = document.createElement("span");
+                span.innerHTML = `<img src="images/cross1.png" alt="Delete" class="delete-icon">`;
+                li.appendChild(span);
+                saveData();
+            } else {
+                li.remove(); 
+                saveData();
+            }
+        }
+    }
+});
+
 function saveData() {
     localStorage.setItem("data", listContainer.innerHTML);
 }
